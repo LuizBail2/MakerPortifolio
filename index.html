@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site com moedas 3D</title>
+    <meta name="description" content="Senior Product Designer focused on fintech, trading, mobile apps, web products, and design systems. Available for full-time product design roles." />
+    <link rel="canonical" href="https://matveyan.com/" />
+    <link rel="icon" href="./favicon.ico?v=2" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png?v=2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png?v=2" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=2" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon-192x192.png?v=2" />
+    <meta property="og:title" content="Matveyan — Senior Product Designer for Fintech, Trading & Design Systems" />
+    <meta property="og:description" content="Senior Product Designer focused on fintech, trading, mobile apps, web products, and design systems. Available for full-time product design roles." />
+    <meta property="og:url" content="https://matveyan.com/" />
+
+    <meta name="twitter:title" content="Matveyan — Senior Product Designer for Fintech, Trading & Design Systems" />
+    <meta name="twitter:description" content="Senior Product Designer focused on fintech, trading, mobile apps, web products, and design systems. Available for full-time product design roles." />
+
+    <script>document.documentElement.classList.add('boot-loading');</script>
+
+    <link rel="stylesheet" href="./custom.css">
+    <script type="module" crossorigin src="./assets/style-BQJhYy7k.js"></script>
+    <link rel="preload" crossorigin href="./assets/style-B4h1bHr3.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" crossorigin href="./assets/style-B4h1bHr3.css"></noscript>
+  </head>
+  <body>
+    <div id="coins3d" aria-hidden="true"></div>
+
+<div class="loader" aria-hidden="true">
+  <div class="loading-screen loading-screen--top"></div>
+  <div class="loading-screen loading-screen--bottom"></div>
+
+  <div class="loaderContent" id="loadingContent">
+    <img class="loaderLogo" src="https://via.placeholder.com/90x90/ffffff/000000?text=LOGO" alt="Logo">
+
+    <div class="loadline">
+      <div class="loading-bar"></div>
+    </div>
+
+    <span class="loadpercent">0%</span>
+  </div>
+</div>
+
+    <div class="coursor"></div>
+    <div class="noise"></div>
+    <div class="frameScreen">
+      <div class="progress">
+        <div class="line">
+          <div class="activeLine"></div>
+        </div>
+        <div class="sections">
+          <div class="sec"></div>
+          <div class="sec"></div>
+          <div class="sec"></div>
+          <div class="subsec"></div>
+            <div class="subsec"></div>
+            <div class="subsec"></div>
+            <div class="subsec"></div>
+            <div class="subsec"></div>
+          <div class="sec"></div>
+        </div>
+      </div>
+      <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topleft">
+        <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+      </svg>      
+      <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topright">
+        <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+      </svg>    
+      <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomleft">
+        <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+      </svg>    
+      <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomright">
+        <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+      </svg>        
+      <div class="header">
+        <a href="#" id="backToTopLink" class="link" style="text-transform:none; padding:8px 12px;">
+          <img src="./logo-1.png" alt="Minha logo" style="height:44px; width:auto; display:block;">
+        </a>
+        <ul class="mainMenu" style="margin-left:auto;">
+          <li>
+  <a href="curriculo-editor-video.pdf" class="link" target="_blank" rel="noopener noreferrer">
+    cv
+    <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 0H0L4 4V0Z" fill="white"/>
+    </svg>
+  </a>
+</li>
+          <li><a href="https://discord.com/users/1214254568771166270" class="link" target="_blank" rel="noopener noreferrer">discord <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 0H0L4 4V0Z" fill="white"/>
+            </svg>
+            </a></li>
+          <li><a href="https://wa.me/5542988672277" class="link" target="_blank" rel="noopener noreferrer">whatsapp <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 0H0L4 4V0Z" fill="white"/>
+            </svg>
+            </a></li>
+          <li><a href="mailto:luizbailedit@gmail.com" class="link" target="_blank" rel="noopener noreferrer">mail <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 0H0L4 4V0Z" fill="white"/>
+              </svg>
+              </a></li>
+        </ul>
+<svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomleft">
+  <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+</svg>    
+<svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomright">
+  <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+</svg>        
+      </div>
+      <div class="footer">
+        <div class="footerLeft">
+        </div>
+      <div class="scrollDown">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="3.5" width="10" height="15" rx="3.5" stroke="white"/>
+          <rect x="9.5" y="6" width="1" height="4" rx="0.5" fill="white"/>
+        </svg>
+        <span>Scroll down</span>
+      </div>
+      <div class="footNumbers">
+        <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topleft">
+          <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+        </svg>      
+        <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topright">
+          <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+        </svg>    
+        <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomleft">
+          <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+        </svg>    
+        <div class="footNumbersColumn">
+          <div>Cursor X: <span data-debug-x>0</span></div>
+      <div>Cursor Y: <span data-debug-y>0</span></div>
+        </div>
+        <span class="divider"></span>
+        <div class="footNumbersColumn">
+          <div>Scroll: <span data-debug-scroll>0</span></div>
+      <div>Time: <span data-debug-time>0.0s</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="hero-content">
+      <div class="hero-inner">
+        <div class="logoTitle">
+  <img src="./logo-1.png?v=300" alt="Minha logo" class="heroLogo">
+  <h1>
+    <b>Editor de Videos</b>
+  </h1>
+</div>
+      <p>Produzo conteúdos dinâmicos, envolventes e visualmente impactantes, adaptados a diferentes formatos e objetivos.Meu trabalho combina cortes estratégicos, ritmo, sound design, efeitos sonoros, transições, animações, Motion Design e composição visual, sempre buscando uma edição fluida e profissional.</p>
+      <a href="https://discord.com/users/1214254568771166270?utm_source=chatgpt.com" class="btn"  data-cursor-text="Mande mensagem">
+        <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topleft">
+          <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+        </svg>      
+        <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topright">
+          <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+        </svg>    
+        <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomleft">
+          <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+        </svg>    
+        <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomright">
+          <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+        </svg>        
+        <span>Me chame no Discord</span></a>
+      </div>
+    </div>
+    <div id="bg-video-stack" aria-hidden="true">
+      <video
+        id="bg-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="./mbg.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="edge-blur" aria-hidden="true">
+      <div class="edge-blur__top"></div>
+      <div class="edge-blur__bottom"></div>
+    </div>
+    <div id="webgl-root" aria-hidden="true"></div>
+    <div class="scroll-stage" aria-hidden="true"></div>
+      <div class="section" id="spec">
+        <div class="container">
+        <ul class="tags" data-motion-text>
+          <li>Conheça minha trajetória e habilidades</li>
+        </ul>
+<h2 data-motion-text>
+  <b>Atualmente trabalho com</b>
+  <img class="softwareLogo" src="./davinci.png?v=2" alt="DaVinci Resolve">
+  <b class="davinciText">
+    <span class="dv-orange">Da</span><span class="dv-red">Vinci</span>
+    <span class="dv-blue">Resolve</span>
+  </b>
+  e
+  <img class="softwareLogo" src="./capcut.png?v=2" alt="CapCut">
+  <b class="capcutText">
+    <span class="cc-white">Cap</span><span class="cc-gray">Cut</span>
+  </b>,
+  com edições voltadas para vários tipos de conteúdo.
+  Tenho experiência com criação de vídeos para Tenho experiência com criação de vídeos para
+<span class="youtubeText">YouTube</span>,
+<span class="tiktokText">TikTok</span> e
+<span class="instagramText">Instagram</span>,
+  sejam eles longos ou curtos.
+</h2>
+<p class="bio" data-motion-text><span>Meu objetivo é transformar material bruto em conteúdo com ritmo, impacto e clareza pronto pra postar.</span></p>
+<ul class="btnGroup" data-motion-text>
+  <li>
+    <a href="https://t.me/MatveyAnanev" class="btn"  data-cursor-text="Send me message">
+      <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topleft">
+        <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+      </svg>      
+      <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topright">
+        <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+      </svg>    
+      <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomleft">
+        <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+      </svg>    
+      <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomright">
+        <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+      </svg>        
+      <span>Chame no Discord</span></a>
+  </li>
+  <li>
+    <a href="curriculo-editor-video.pdf" class="btn secondary"  data-cursor-text="Available hire">
+      <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topleft">
+        <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+      </svg>      
+      <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topright">
+        <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+      </svg>    
+      <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomleft">
+        <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+      </svg>    
+      <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomright">
+        <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+      </svg>        
+      <span>Curriculo para DOWNLOAD</span></a>
+  </li>
+</ul>
+      </div>
+    </div>
+    <div class="section" id="cases">
+      <div class="container">
+<div class="titleGroup">
+
+<h2 data-motion-text>
+  <b>Meus contatos</b>
+  <span class="titleSocialLinks">
+    <a 
+      href="https://discord.com/channels/@me" 
+      class="discordLink" 
+      target="_blank" 
+      rel="noopener noreferrer">
+      Discord
+    </a>
+    <a 
+      href="https://wa.me/5542988672277" 
+      class="whatsappLink" 
+      target="_blank" 
+      rel="noopener noreferrer">
+      WhatsApp
+    </a>
+  </span>
+  <br/>
+  Vamos conversar sobre seu próximo vídeo
+</h2>
+
+</div>
+    </div>
+    <div class="caseList">
+      <div class="case">
+        <div class="caseInfo" data-motion-text>
+          <h3>Videos Longos</h3>
+          <p>Edito praticamente qualquer formato de vídeo. Do conteúdo de opinião e comentário a podcasts, vlogs e humor; de tutoriais e DIY a reviews, unboxings e apresentações de produto. Atendo desde trabalhos escolares e universitários </p>
+        </div>
+
+        <div class="imageMask mediaShowcase">
+  <div class="mediaGrid">
+    <video class="mediaItem" autoplay muted loop playsinline preload="metadata">
+  <source src="./assets/media/video1.mp4" type="video/mp4">
+</video>
+<video class="mediaItem" autoplay muted loop playsinline preload="metadata">
+  <source src="./assets/media/video2.mp4" type="video/mp4">
+</video>
+<video class="mediaItem" autoplay muted loop playsinline preload="metadata">
+  <source src="./assets/media/video3.mp4" type="video/mp4">
+</video>
+    <img class="mediaItem" src="./assets/images/Foto15.webp" alt="Trabalho de edição">
+    <img class="mediaItem" src="./assets/images/foto2.jpg" alt="Trabalho de edição">
+    <img class="mediaItem" src="./assets/images/Foto16.webp" alt="Trabalho de edição">
+  </div>
+
+  <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topleft">
+    <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+  </svg>
+
+  <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topright">
+    <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+  </svg>
+
+  <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomleft">
+    <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+  </svg>
+
+  <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomright">
+    <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+  </svg>
+</div>
+      </div>
+      <div class="case case--motions">
+  <div class="caseInfo" data-motion-text>
+    <ul class="tags">
+      <li>Motion</li>
+      <li>Vídeos verticais</li>
+      <li>Social media</li>
+    </ul>
+    <h3>Motions</h3>
+    <p>Produzo conteúdos modernos e envolventes para marcas, redes sociais, anúncios, apresentações e projetos digitais, com Motions, sempre buscando unir criatividade, ritmo e impacto visual.</p>
+  </div>
+
+  <div class="imageMask motionShowcase">
+
+    <div class="verticalVideoGrid">
+      <button 
+        type="button" 
+        class="verticalVideoCard"
+        data-video="./assets/media/DAVINCE.mp4"
+        data-images="./assets/images/Imagen1.webp,./assets/images/Imagen2.webp,./assets/images/Imagen3.webp"
+      >
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="./assets/media/DAVINCE.mp4" type="video/mp4">
+        </video>
+        <span>Projeto 01</span>
+      </button>
+
+      <button 
+        type="button" 
+        class="verticalVideoCard"
+        data-video="./assets/media/TheuS Digital.mov"
+        data-images="./assets/images/Imagen4.webp,./assets/images/Imagen5.webp,./assets/images/Imagen6.webp"
+      >
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="./assets/media/TheuS Digital.mov" type="video/mp4">
+        </video>
+        <span>Projeto 02</span>
+      </button>
+
+      <button 
+        type="button" 
+        class="verticalVideoCard"
+        data-video="./assets/media/MotionVNZ.mov"
+        data-images="./assets/images/Imagen7.webp,./assets/images/Imagen8.webp,./assets/images/Imagen9.webp">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="./assets/media/MotionVNZ.mov" type="video/mp4">
+        </video>
+        <span>Projeto 03</span>
+      </button>
+
+    </div>
+
+    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topleft">
+      <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+    </svg>
+
+    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topright">
+      <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+    </svg>
+
+    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomleft">
+      <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+    </svg>
+
+    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomright">
+      <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+    </svg>
+
+  </div>
+</div>
+
+      <div class="case case--appdesign">
+        <div class="caseInfo" data-motion-text>
+          <ul class="tags">
+            <li>Vídeos Publicitários e de Divulgação</li>
+          </ul>
+          <h3>Rede Sociais</h3>
+          <p>Criação de vídeos curtos e dinâmicos para anúncios, promoções e divulgação de estabelecimentos, com foco em destacar produtos, serviços e ofertas de forma atrativa e persuasiva, ideal para Instagram, TikTok, Facebook e anúncios online.</p>
+        </div>
+
+        <div class="imageMask motionShowcase">
+          <div class="verticalVideoGrid">
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/Th Produtos 1.mov"
+              data-images="./assets/images/foto4.webp,./assets/images/foto5.webp,./assets/images/foto6.webp">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/Th Produtos 1.mov" type="video/mp4">
+              </video>
+              <span>Projeto 04</span>
+            </button>
+
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/Th Produtos 2.mov"
+              data-images="./assets/images/foto7.webp,./assets/images/foto8.webp,./assets/images/foto9.webp">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/Th Produtos 2.mov" type="video/mp4">
+              </video>
+              <span>Projeto 05</span>
+            </button>
+
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/HarpYa.mov"
+              data-images="./assets/images/foto10.webp,./assets/images/foto11.webp,./assets/images/foto12.webp">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/HarpYa.mov" type="video/mp4">
+              </video>
+              <span>Projeto 06</span>
+            </button>
+          </div>
+
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topleft">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>      
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topright">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>    
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomleft">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>    
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomright">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>        
+        </div>
+      </div>
+
+      <div class="case case--tutoriais">
+        <div class="caseInfo" data-motion-text>
+          <ul class="tags">
+            <li>Totoriais</li>
+            <li>Vlogs</li>
+            <li>Curiosidades</li>
+          </ul>
+          <h3>Videos Longos</h3>
+          <p>Produção de vídeos dinâmicos e envolventes para tutoriais, curiosidades e vlogs, combinando edição criativa, cortes estratégicos, trilhas, efeitos e storytelling para informar, entreter e prender a atenção do público.</p>
+        </div>
+
+        <div class="imageMask motionShowcase">
+          <div class="verticalVideoGrid">
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/10Curiosidades.mp4"
+              data-images="./assets/images/Foto14.webp,./assets/images/Foto13.webp">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/10Curiosidades.mp4" type="video/mp4">
+              </video>
+              <span>Projeto 07</span>
+            </button>
+
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/Gojows.mp4"
+              data-images="./assets/images/Foto15.webp,./assets/images/Foto16.webp">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/Gojows.mp4" type="video/mp4">
+              </video>
+              <span>Projeto 08</span>
+            </button>
+
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/Noruega.mp4"
+              data-images="./assets/images/Foto17.webp,./assets/images/Foto18.png">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/Noruega.mp4" type="video/mp4">
+              </video>
+              <span>Projeto 09</span>
+            </button>
+
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/curiosidade.mov"
+              data-images="./assets/images/Foto19.webp,./assets/images/Foto20.webp">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/curiosidade.mov" type="video/mp4">
+              </video>
+              <span>Projeto 10</span>
+            </button>
+          </div>
+
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topleft">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>      
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topright">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>    
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomleft">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>    
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomright">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>        
+        </div>
+      </div>
+
+      <div class="case case--cunex">
+        <div class="caseInfo" data-motion-text>
+          <ul class="tags">
+            <li>Videos/AppDesign</li>
+            <li>Gaming</li>
+            <li>Shorts</li>
+          </ul>
+          <h3>Variedade e videos</h3>
+          <p>Do conteúdo gamer ao Motions no estilo App Design, dos Shorts aos vídeos para redes sociais, transformo ideias em vídeos dinâmicos, criativos e feitos para prender a atenção do primeiro ao último segundo.</p>
+        </div>
+
+        <div class="imageMask motionShowcase">
+          <div class="verticalVideoGrid">
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/MotionKey4Play.mov"
+              data-images="./assets/images/Foto21.webp,./assets/images/Foto22.webp">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/MotionKey4Play.mov" type="video/mp4">
+              </video>
+              <span>Projeto 11</span>
+            </button>
+
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/gta.mov"
+              data-images="./assets/images/Foto23.webp,./assets/images/Foto24.webp">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/gta.mov" type="video/mp4">
+              </video>
+              <span>Projeto 12</span>
+            </button>
+
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/misterio.mov"
+              data-images="./assets/images/Foto25.webp,./assets/images/Foto26.webp">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/misterio.mov" type="video/mp4">
+              </video>
+              <span>Projeto 13</span>
+            </button>
+          </div>
+
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topleft">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>      
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topright">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>    
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomleft">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>    
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomright">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>        
+        </div>
+      </div>
+
+      <div class="case case--cryptoicons">
+        <div class="caseInfo" data-motion-text>
+          <ul class="tags">
+            <li>Shorts</li>
+            <li>YouTube Shorts</li>
+          </ul>
+          <h3>Edição dinâmica</h3>
+          <p>Edição de Shorts para YouTube, desde conteúdos de entretenimento e curiosidades até cortes, outros formatos. Cada vídeo é editado de acordo com a proposta do conteúdo, buscando deixar tudo mais direto, fluido e agradável de assistir.
+</p>
+        </div>
+
+        <div class="imageMask motionShowcase">
+          <div class="verticalVideoGrid">
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/bgMotion.mov"
+              data-images="./assets/images/Foto27.webp,./assets/images/Foto28.webp">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/bgMotion.mov" type="video/mp4">
+              </video>
+              <span>Projeto 14</span>
+            </button>
+
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/AlertaCivil.mp4"
+              data-images="./assets/images/Foto29.webp,./assets/images/Foto30.webp">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/AlertaCivil.mp4" type="video/mp4">
+              </video>
+              <span>Projeto 15</span>
+            </button>
+
+            <button type="button" class="verticalVideoCard"
+              data-video="./assets/media/FinanceFlow.mp4"
+              data-images="./assets/images/Foto31.webp,./assets/images/Foto32.webp">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./assets/media/FinanceFlow.mp4" type="video/mp4">
+              </video>
+              <span>Projeto 16</span>
+            </button>
+          </div>
+
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topleft">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>      
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="topright">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>    
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomleft">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>    
+          <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomright">
+            <path d="M3 2H5V3H3V5H2V3H0V2H2V0H3V2Z" fill="#D9D9D9"/>
+          </svg>        
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section lalalast" id="exp">
+    <div class="container last">
+      <div class="block">
+        <div class="col" data-motion-text>
+          <h3 class="small">Experiência</h3>
+          <ul class="list" data-motion-text>
+            <li>
+              <span class="date">Meados de 2025 – início de 2026 · GGMAX</span>
+              <h4>Editor de Vídeo — Canais de YouTube</h4>
+              <p>Edição de vídeos para canais do YouTube, incluindo vídeos longos, curtos (shorts) e motions.</p>
+            </li>
+            <li>
+              <span class="date">Janeiro – fevereiro de 2026 · Imperiall</span>
+              <h4>Editor de Vídeo</h4>
+              <p>Editor de Videos da Imperiall , parceria que segue ativa até hoje.</p>
+            </li>
+            <li>
+              <span class="date">Fevereiro – março de 2026 · Theus Digital, Indio Store  e outros</span>
+              <h4>Editor de Vídeo</h4>
+              <p>Trabalhei Theus Digital , Indio Store e diversos outros servidores e lojas online de venda de produtos digitais.</p>
+            </li>
+            <li>
+              <span class="date">Março – maio de 2026 · Stop Car Veículos, Harpya, BloXify</span>
+              <h4>Editor de Vídeo</h4>
+              <p>Produzi anuncios, reels para Stop Car Veículos, Harpya Auto Estética, BloXify e canais de YouTube, entre vídeos longos, shorts e motions.</p>
+            </li>
+            <li>
+              <span class="date">Maio – julho de 2026 · Th Car Care, Key4Play, NightmareBrasil</span>
+              <h4>Editor de Vídeo</h4>
+              <p>Edição de videos para Th Car Care Produtos Automotivos, Key4Play , NightmareBrasil e canais de YouTube.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <div class="col" data-motion-text>
+          <h3 class="small">Habilidades</h3>
+          <ul class="list" data-motion-text>
+            <li>
+              <h4>EDIÇÃO DE VÍDEO</h4>
+              <p>Cortes, ritmo, storytelling e diferentes técnicas de edição para criar vídeos fluidos e bem estruturados.</p>
+            </li>
+            <li>
+              <h4>MOTIONS</h4>
+              <p>Criativos com textos animados, transições, elementos gráficos e animações para adicionar movimento e personalidade aos vídeos.</p>
+            </li>
+            <li>
+              <h4>EFEITOS VISUAIS</h4>
+              <p>Composição, máscaras, tracking, chroma key, efeitos e manipulação de elementos visuais.</p>
+            </li>
+            <li>
+              <h4>DESIGN DE ÁUDIO</h4>
+              <p>Trilhas, efeitos sonoros, sincronização e tratamento de áudio para complementar e dar mais impacto à edição.</p>
+            </li>
+            <li>
+              <h4>COR E ESTILO</h4>
+              <p>Correção de cor e criação de diferentes atmosferas e estilos visuais de acordo com a proposta do projeto.</p>
+            </li>
+            <li>
+              <h4>DIVERSIDADE</h4>
+              <p>Edição para Shorts, Reels e outros conteúdos rápidos, trabalhando ritmo, cortes, legendas e elementos visuais..</p>
+            </li>
+            <li>
+              <h4>TÉCNICAS CRIATIVAS</h4>
+              <p>Combinação de diferentes técnicas e estilos de edição para encontrar a melhor abordagem para cada projeto.</p>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      
+        
+      </div>      
+      </div>
+      <div class="container vse" data-motion-text>
+        <svg viewBox="0 0 190 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="18" font-family="'Cartograph Mono CF', monospace" font-weight="700" font-size="20" fill="white" textLength="190" lengthAdjust="spacingAndGlyphs">LUIZMAKER</text>
+          </svg>          
+      </div>
+  </div>  
+
+    <div class="mediaLightbox" id="mediaLightbox">
+  <button class="mediaLightboxClose" id="mediaLightboxClose">×</button>
+  <div class="mediaLightboxContent" id="mediaLightboxContent"></div>
+</div>
+
+<script>
+  const mediaItems = document.querySelectorAll(".mediaItem");
+  const mediaLightbox = document.getElementById("mediaLightbox");
+  const mediaLightboxContent = document.getElementById("mediaLightboxContent");
+  const mediaLightboxClose = document.getElementById("mediaLightboxClose");
+
+  mediaItems.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      mediaLightboxContent.innerHTML = "";
+
+      if (item.tagName.toLowerCase() === "video") {
+        const source = item.querySelector("source");
+        const videoSrc = source ? source.getAttribute("src") : item.getAttribute("src");
+
+        const video = document.createElement("video");
+        video.src = videoSrc;
+        video.controls = true;
+        video.autoplay = true;
+        video.muted = false;
+        video.loop = true;
+        video.playsInline = true;
+
+        mediaLightboxContent.appendChild(video);
+      } else {
+        const img = document.createElement("img");
+        img.src = item.getAttribute("src");
+        img.alt = item.getAttribute("alt") || "Trabalho de edição";
+
+        mediaLightboxContent.appendChild(img);
+      }
+
+      mediaLightbox.classList.add("active");
+    });
+  });
+
+  function closeMediaLightbox() {
+    mediaLightbox.classList.remove("active");
+    mediaLightboxContent.innerHTML = "";
+  }
+
+  mediaLightboxClose.addEventListener("click", closeMediaLightbox);
+
+  mediaLightbox.addEventListener("click", (event) => {
+    if (event.target === mediaLightbox) {
+      closeMediaLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMediaLightbox();
+    }
+  });
+</script>
+
+<div class="portfolioLightbox" id="portfolioLightbox">
+  <button class="portfolioClose" id="portfolioClose">×</button>
+
+  <div class="portfolioLightboxInner">
+    <div class="portfolioMain" id="portfolioMain"></div>
+    <div class="portfolioThumbs" id="portfolioThumbs"></div>
+  </div>
+</div>
+
+<script>
+  const videoCards = document.querySelectorAll(".verticalVideoCard");
+  const portfolioLightbox = document.getElementById("portfolioLightbox");
+  const portfolioMain = document.getElementById("portfolioMain");
+  const portfolioThumbs = document.getElementById("portfolioThumbs");
+  const portfolioClose = document.getElementById("portfolioClose");
+
+  let portfolioItems = [];
+  let currentPortfolioIndex = 0;
+
+  function createMediaElement(item, isThumb = false) {
+    if (item.type === "video") {
+      const video = document.createElement("video");
+      video.src = item.src;
+      video.controls = !isThumb;
+      video.autoplay = !isThumb;
+      video.muted = isThumb;
+      video.loop = true;
+      video.playsInline = true;
+      video.preload = "metadata";
+      return video;
+    }
+
+    const img = document.createElement("img");
+    img.src = item.src;
+    img.alt = "Trabalho de edição";
+    return img;
+  }
+
+  function renderPortfolioMain(index) {
+    currentPortfolioIndex = index;
+    portfolioMain.innerHTML = "";
+
+    const item = portfolioItems[index];
+    const media = createMediaElement(item, false);
+
+    portfolioMain.appendChild(media);
+
+    const thumbs = portfolioThumbs.querySelectorAll(".portfolioThumb");
+    thumbs.forEach((thumb, thumbIndex) => {
+      thumb.classList.toggle("active", thumbIndex === index);
+    });
+  }
+
+  function openPortfolio(card) {
+    const videoSrc = card.dataset.video;
+    const images = card.dataset.images
+      ? card.dataset.images.split(",").map(src => src.trim()).filter(Boolean)
+      : [];
+
+    portfolioItems = [
+      { type: "video", src: videoSrc },
+      ...images.map(src => ({ type: "image", src }))
+    ];
+
+    portfolioThumbs.innerHTML = "";
+
+    portfolioItems.forEach((item, index) => {
+      const button = document.createElement("button");
+      button.className = "portfolioThumb";
+
+      const thumbMedia = createMediaElement(item, true);
+      button.appendChild(thumbMedia);
+
+      button.addEventListener("click", () => {
+        renderPortfolioMain(index);
+      });
+
+      portfolioThumbs.appendChild(button);
+    });
+
+    renderPortfolioMain(0);
+    portfolioLightbox.classList.add("active");
+  }
+
+  function closePortfolio() {
+    portfolioLightbox.classList.remove("active");
+    portfolioMain.innerHTML = "";
+    portfolioThumbs.innerHTML = "";
+  }
+
+  videoCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      openPortfolio(card);
+    });
+  });
+
+  portfolioClose.addEventListener("click", closePortfolio);
+
+  portfolioLightbox.addEventListener("click", (event) => {
+    if (event.target === portfolioLightbox) {
+      closePortfolio();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closePortfolio();
+    }
+  });
+</script>
+
+<script>
+  var backToTopLink = document.getElementById("backToTopLink");
+  if (backToTopLink) {
+    backToTopLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      if (window.lenis && typeof window.lenis.scrollTo === "function") {
+        window.lenis.scrollTo(0);
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
+    });
+  }
+</script>
+
+<!-- Three.js precisa vir depois do HTML, para o coins3d.js encontrar o #coins3d -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="./assets/js/coins3d.js"></script>
+</body>
+</html>
