@@ -611,3 +611,339 @@ html, body { margin: 0; background: #0f0f0f; }
 .section#exp .container.last .col {
     width: 100%;
 }
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/* Tablets e telas menores */
+@media (max-width: 1100px) {
+
+  /* Cards dos projetos */
+  #cases .case:first-child,
+  .case.case--motions,
+  .case.case--appdesign,
+  .case.case--tutoriais,
+  .case.case--cunex,
+  .case.case--cryptoicons {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  /* Remove larguras fixas dos showcases */
+  #cases .case:first-child .imageMask.mediaShowcase,
+  .case--motions .imageMask.motionShowcase,
+  .case--appdesign .imageMask.motionShowcase,
+  .case--tutoriais .imageMask.motionShowcase,
+  .case--cunex .imageMask.motionShowcase,
+  .case--cryptoicons .imageMask.motionShowcase {
+    width: min(90vw, 900px);
+    max-width: 90vw;
+    flex: 0 1 auto;
+  }
+
+  /* Informações dos projetos */
+  #cases .case:first-child .caseInfo,
+  .case--motions .caseInfo,
+  .case--appdesign .caseInfo,
+  .case--tutoriais .caseInfo,
+  .case--cunex .caseInfo,
+  .case--cryptoicons .caseInfo {
+    width: min(90vw, 600px);
+    max-width: 90vw;
+    flex: 0 1 auto;
+    margin: 0;
+    text-align: center;
+    order: 2;
+  }
+
+  /* Showcase */
+  .mediaShowcase,
+  .motionShowcase {
+    overflow: hidden !important;
+  }
+
+  /* Remove deslocamento do primeiro projeto */
+  #cases .case:first-child .mediaShowcase {
+    transform: none;
+  }
+
+  /* Grid dos vídeos */
+  .mediaGrid {
+    max-height: none;
+    height: auto;
+  }
+
+  /* Vídeos verticais */
+  .verticalVideoGrid {
+    min-height: auto;
+  }
+
+  /* Experiência + habilidades */
+  .section#exp .container.last {
+    width: 90vw;
+    max-width: 900px;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* =========================
+     LOGOS
+     ========================= */
+
+  .heroLogo {
+    width: 45px;
+    margin-bottom: 12px;
+  }
+
+  .softwareLogo {
+    width: 28px !important;
+    height: 28px !important;
+    margin: 0 5px !important;
+  }
+
+
+  /* =========================
+     REDES SOCIAIS
+     ========================= */
+
+  .titleSocialLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0 0 0;
+  }
+
+  .discordLink {
+    font-size: 0.85em;
+  }
+
+  .whatsappLink {
+    font-size: 0.78em;
+  }
+
+
+  /* =========================
+     PROJETOS
+     ========================= */
+
+  #cases .case:first-child,
+  .case.case--motions,
+  .case.case--appdesign,
+  .case.case--tutoriais,
+  .case.case--cunex,
+  .case.case--cryptoicons {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+
+  /* =========================
+     INFORMAÇÕES DOS PROJETOS
+     ========================= */
+
+  #cases .case:first-child .caseInfo,
+  .case--motions .caseInfo,
+  .case--appdesign .caseInfo,
+  .case--tutoriais .caseInfo,
+  .case--cunex .caseInfo,
+  .case--cryptoicons .caseInfo {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+
+  /* =========================
+     GALERIAS
+     ========================= */
+
+  #cases .case:first-child .imageMask.mediaShowcase,
+  .case--motions .imageMask.motionShowcase,
+  .case--appdesign .imageMask.motionShowcase,
+  .case--tutoriais .imageMask.motionShowcase,
+  .case--cunex .imageMask.motionShowcase,
+  .case--cryptoicons .imageMask.motionShowcase {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    box-sizing: border-box;
+  }
+
+
+  /* =========================
+     GRID DE IMAGENS
+     ========================= */
+
+  .mediaGrid {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .mediaItem {
+    min-height: 110px;
+    aspect-ratio: 16 / 10;
+  }
+
+
+  /* =========================
+     VÍDEOS VERTICAIS
+     ========================= */
+
+  .verticalVideoGrid {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: none !important;
+    gap: 8px;
+    padding: 5px;
+  }
+
+  .case--tutoriais .verticalVideoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: none;
+    min-height: 0;
+  }
+
+  .case--tutoriais .verticalVideoCard {
+    aspect-ratio: 9 / 16;
+  }
+
+  .case--tutoriais .verticalVideoCard:nth-child(1),
+  .case--tutoriais .verticalVideoCard:nth-child(2),
+  .case--tutoriais .verticalVideoCard:nth-child(3),
+  .case--tutoriais .verticalVideoCard:nth-child(4) {
+    grid-area: auto;
+  }
+
+
+  /* =========================
+     LIGHTBOX
+     ========================= */
+
+  .mediaLightbox,
+  .portfolioLightbox {
+    padding: 15px;
+  }
+
+  .mediaLightboxContent {
+    width: 96vw;
+    height: 80vh;
+  }
+
+  .portfolioLightboxInner {
+    width: 96vw;
+    height: 85vh;
+  }
+
+  .portfolioMain {
+    height: calc(100% - 85px);
+  }
+
+  .portfolioThumbs {
+    height: 65px;
+    margin-top: 10px;
+  }
+
+  .portfolioThumb {
+    width: 48px;
+    height: 62px;
+  }
+
+  .mediaLightboxClose,
+  .portfolioClose {
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+  }
+
+
+  /* =========================
+     EXPERIÊNCIA / HABILIDADES
+     ========================= */
+
+  .section#exp .container.last {
+    width: calc(100% - 30px);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .section#exp .container.last .block,
+  .section#exp .container.last .col {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .mediaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mediaItem {
+    min-height: 160px;
+  }
+
+  .verticalVideoGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .titleSocialLinks {
+    gap: 7px;
+  }
+
+  .softwareLogo {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
